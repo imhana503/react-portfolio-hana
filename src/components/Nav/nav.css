@@ -1,0 +1,28 @@
+/* ============  Nav  ============== */
+.nav {
+   position:fixed;
+   top:50%;
+   right:2rem;
+   transform: translateY(-50%);
+ }
+ 
+ .nav>a {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   width:4rem;
+   height:4rem;
+   background-color:var(--color-gray);
+   font-size:2rem;
+   color:var(--color-white);
+   border-radius: 100%;
+ }
+ 
+ .nav>a+a {
+   margin-top:1rem;
+ }
+ 
+ .nav>a.active{
+   background-color:var(--color-primary)
+ }
+ 

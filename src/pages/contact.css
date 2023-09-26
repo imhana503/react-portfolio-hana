@@ -1,0 +1,30 @@
+.contact .form {
+   margin:0 auto;   
+   font-size:1.5rem;
+  
+}
+
+.contact .form .form-name {
+   padding:.8rem 0; 
+}
+
+.contact .card {
+   padding:2rem;
+   background-color:#2e2860;
+   border:.1rem solid transparent;
+   border-radius: 1rem;
+   transition: var(--transtion);
+}
+
+.contact .card:hover{
+   background-color: transparent;
+   border-color:#2e2860;
+}
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+   .contact .btn-group .btn{
+     width:auto;    
+   }
+ }
+ 
