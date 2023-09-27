@@ -16,15 +16,33 @@ export const pojects = [
       link:'https://www.inavi.com/',
    },
    {
-      title:'아이나비',
+      title:'아이나비2',
       device:'PC',
-      date:'2014.09',
+      date:'2014.10',
       link:'https://www.inavi.com/',
    },
    {
-      title:'아이나비',
+      title:'아이나비3',
       device:'PC',
-      date:'2014.09',
+      date:'2014.12',
+      link:'https://www.inavi.com/',
+   },
+   {
+      title:'피씨다!!!!!!!!!',
+      device:'PC',
+      date:'2015.12',
+      link:'https://www.inavi.com/',
+   },
+   {
+      title:'모바일!!!!!!!!!',
+      device:'MOBILE',
+      date:'2012.12',
+      link:'https://www.inavi.com/',
+   },
+   {
+      title:'반응형이다',
+      device:'ResponsiveWeb',
+      date:'2011.12',
       link:'https://www.inavi.com/',
    },
 ]
