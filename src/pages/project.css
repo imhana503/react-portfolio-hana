@@ -28,3 +28,11 @@
     border:1px solid red;
     border-radius: 1rem;
 }  
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+    .section.project .card-wrap{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

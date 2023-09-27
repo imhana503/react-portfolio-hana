@@ -66,7 +66,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding:1rem .6rem;
+  padding:1.5rem 2.6rem;
   background-color:var(--color-primary);
   color:var(--color-white);
   border:none;
@@ -113,4 +113,11 @@ textarea {
   color:var(--color-primary)
 }
 
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+  .page-tit {
+    margin:4rem auto;    
+  }
+}
 

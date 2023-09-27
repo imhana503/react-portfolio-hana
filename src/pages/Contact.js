@@ -23,12 +23,12 @@ const Contact = () => {
    return(
       <section className="section contact">
          <h1 className="page-tit"><span>Contact </span>Me</h1>
-         <div classNmae="group">
+         <div className="card-wrap">
             <div className="card">
                <AiOutlineMail className="icon"/>
                <h2>Email</h2>
                <p>imhana503@gmail.com</p>
-               <span>Seand a message</span>
+               <small>Seand a message</small>
             </div>
             <div className="form">
                <form ref={form} onSubmit={sendEmail}>
