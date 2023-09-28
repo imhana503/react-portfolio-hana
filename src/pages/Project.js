@@ -30,6 +30,8 @@ const Project = () => {
    const [sortDates, setSortDates] = useState('latest');
    const [sortDevices, setSortDevices] = useState('all');
 
+   const getProcesse = () => {}
+
    console.log( new Date('2014.09').getTime() )
 
    return(
