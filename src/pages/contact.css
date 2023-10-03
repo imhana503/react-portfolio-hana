@@ -1,30 +1,65 @@
-.contact .form {
+.section.contact .form {
    margin:0 auto;   
    font-size:1.5rem;
   
 }
 
-.contact .form .form-name {
-   padding:.8rem 0; 
+.section.contact .form .form-name {
+   padding:1rem 0; 
 }
 
-.contact .card {
+.section.contact {
+   transition: var(--transtion);
+}
+
+.section.contact .card {
    padding:2rem;
+   margin-bottom:2rem;
    background-color:#2e2860;
+   text-align: center;
+   font-size:1.4rem;
+   font-weight:700;
    border:.1rem solid transparent;
    border-radius: 1rem;
    transition: var(--transtion);
 }
 
-.contact .card:hover{
+.section.contact .card:hover{
    background-color: transparent;
    border-color:#2e2860;
 }
 
+.section.contact .card .icon {
+   font-size:2rem;
+}
+
+.section.contact .card p {
+   margin-top:.5rem;
+   font-size:1.4rem;
+   
+}
+
+.section.contact .card small {   
+   color:#8d47ff;
+}
+
+.section.contact .btn{
+   padding:1.5rem 2.6rem;
+}
+
 /* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
 @media screen and (min-width: 768px){
-   .contact .btn-group .btn{
+   /* .section.contact .btn-group .btn{
      width:auto;    
+   } */
+
+   /* .section.contact .card-wrap {
+      display:flex;  
+   } */
+
+   .section.contact {
+      width:60rem;
+      margin:0 auto;
    }
  }
  

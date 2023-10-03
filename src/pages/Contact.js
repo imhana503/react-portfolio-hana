@@ -1,9 +1,16 @@
 import './contact.css';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { AiOutlineMail } from 'react-icons/ai';
 
 const Contact = () => {
+   useEffect(()=>{
+      const title = document.getElementsByTagName('title')[0];
+      title.textContent = 'CONTACT | 임하나의 포트폴리오';
+   },[]);
+
+
+
    const form = useRef();
    const sendEmail = (e) => {
       e.preventDefault();
@@ -23,12 +30,12 @@ const Contact = () => {
    return(
       <section className="section contact">
          <h1 className="page-tit"><span>Contact </span>Me</h1>
-         <div classNmae="group">
+         <div className="card-wrap">
             <div className="card">
                <AiOutlineMail className="icon"/>
                <h2>Email</h2>
                <p>imhana503@gmail.com</p>
-               <span>Seand a message</span>
+               <small>Seand a message</small>
             </div>
             <div className="form">
                <form ref={form} onSubmit={sendEmail}>

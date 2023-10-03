@@ -19,7 +19,7 @@ const SelectOption = ({ onChange, option }) =>{
       <select onChange={(e)=>onChange(e.target.value)}>
          {
             option.map((it, idx)=>{
-               return <option key={it.idx} value={it.value}>{it.name}</option>
+               return <option key={idx} value={it.value}>{it.name}</option>
             })
          }       
       </select>
@@ -30,9 +30,51 @@ const Project = () => {
    const [sortDates, setSortDates] = useState('latest');
    const [sortDevices, setSortDevices] = useState('all');
 
-   const getProcesse = () => {}
+   const [data, setData] = useState([]);
 
-   console.log( new Date('2014.09').getTime() )
+   useEffect(()=>{
+      setData( pojects );  
+      
+      const title = document.getElementsByTagName('title')[0];
+      title.textContent = 'PROJECT | 임하나의 포트폴리오';
+   },[data]);
+
+ 
+
+   const getData = () =>{
+      const deviceCheck = (it) => {
+   
+         if( it.device === 'PC' ){
+            return it;
+         } 
+
+         if( it.device === 'MOBILE' ){
+            return it;
+         }
+
+         if( it.device === 'ResponsiveWeb' ){
+            return it;
+         }
+      }
+
+      const compare = (a, b) => {
+         console.log('srot')
+         if( sortDates === 'latest' ){
+            return new Date(b.date).getTime() - new Date(a.date).getTime();    
+         } else {
+           return new Date(a.date).getTime() - new Date(b.date).getTime();         
+         }  
+      }
+  
+      const copyData = JSON.parse(JSON.stringify(data));
+      const dataDevicec =  sortDevices === 'all' ? copyData : copyData.filter((it)=> deviceCheck(it))
+      const dataSort = copyData.sort(compare);
+
+      return copyData;
+   }
+
+   getData();
+
 
    return(
       <section className="section project">
@@ -40,7 +82,7 @@ const Project = () => {
          <div className="options">
             <SelectOption
                value={sortDates}
-               onChange={setSortDates}
+               onChange={setSortDates}  
                option={sortDate}
             />
             <SelectOption
@@ -49,10 +91,20 @@ const Project = () => {
                option={sortDevice}
             />
          </div>
-         <div className="">
+         <div className="card-wrap">
             {
-               pojects.map((it)=>{
-                  return<div>{it.title}</div>
+               getData().map((it)=>{
+                  return( 
+                     <div className="card">
+                        <div className="img"><img src={it.thumb} alt='이미지'/></div>
+                        <div>
+                           <p>{it.title}</p>
+                           <p>{it.device}</p>
+                           <p>{it.date}</p>
+                           <a href="#" titlt="새창 열림" target='_blank' className="btn" rel="noopener noreferrer">사이트 바로가기</a>
+                        </div>
+                     </div>
+                  )
                })
             }
          </div>

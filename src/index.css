@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 *{
   margin:0;
@@ -40,6 +41,20 @@ body {
   color:var(--color-white);
   font-size:1.4rrem;
   line-height:1.5;
+}  
+
+em{
+  font-style:normal;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;  
 }
 
 input[type='text'],
@@ -51,14 +66,20 @@ textarea {
   border-radius: .6rem;
 }
 
+img {
+  max-width: 100%;
+  height:auto;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding:1rem .6rem;
+  padding:1rem 1.5rem;
   background-color:var(--color-primary);
   color:var(--color-white);
   border:none;
+  font-weight: var(--font-bold);
   border-radius: .6rem;
   cursor: pointer;
 }
@@ -93,8 +114,8 @@ textarea {
 /* ============  title  ============== */
 .page-tit {
   margin:2rem auto;
+  font-family: 'Montserrat';
   font-size:4rem;
-  font-weight:var(--font-bold);
   text-align: center;
 }
 
@@ -102,4 +123,11 @@ textarea {
   color:var(--color-primary)
 }
 
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+  .page-tit {
+    margin:4rem auto;    
+  }
+}
 

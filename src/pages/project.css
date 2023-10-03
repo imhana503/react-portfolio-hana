@@ -1,0 +1,38 @@
+.section.project .options {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:1rem;
+    margin-bottom:2rem;
+   
+}
+.section.project .options select {
+    padding:1rem;
+    position: relative;
+    background-color: #a0a0c0;
+    border:1px solid var(--color-gray);
+    border-radius:1rem;
+
+    background-image: linear-gradient(45deg, transparent 50%, rgb(132, 132, 132) 50%), linear-gradient(135deg, rgb(132, 132, 132) 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.section.project .card-wrap{
+    display:grid;
+    gap:2rem;
+}  
+
+.section.project .card {
+    padding:2rem;
+    border:1px solid red;
+    border-radius: 1rem;
+}  
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+    .section.project .card-wrap{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

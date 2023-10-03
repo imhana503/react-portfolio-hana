@@ -1,0 +1,122 @@
+.section.home {
+   padding:2rem 0;
+}
+
+.section.home .page-tit {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+}
+
+.section.home .intro{
+   display:flex;
+   flex-direction: column;
+   position: relative;
+   font-size:1.3rem;
+}
+
+.section.home .intro-img {
+   overflow: hidden;
+   box-shadow: 4rem 0rem 2rem rgba(0,0,0,0.5);
+   border-radius: 2rem;
+}
+
+.section.home .intro-img img {
+   object-fit: cover;
+}
+
+.section.home .intro-info {  
+   font-size:1.5rem
+}
+
+.section.home .intro-typing {
+   margin:1.5rem 0;
+   font-size:2.5rem;
+   font-weight: 700;
+}
+
+.section.home .typed-cursor{
+   opacity: 1;
+ }
+
+.section.home .typed-cursor.typed-cursor--blink{
+   animation: typedjsBlink 0.7s infinite;
+   -webkit-animation: typedjsBlink 0.7s infinite;
+           animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink{
+   50% { opacity: 0.0; }
+}
+
+@-webkit-keyframes typedjsBlink{
+   0% { opacity: 1; }
+   50% { opacity: 0.0; }
+   100% { opacity: 1; }
+}
+
+
+.section.home .sub-tit {
+   margin:1.5rem 0 .5rem;
+   font-size:2.1rem;
+   /* font-family: 'Montserrat'; */
+   font-weight: 700;
+   color:var(--color-primary);
+}
+
+.section.home .intro-list {   
+   font-size:1.5rem;   
+}
+
+.section.home .intro-list em {
+   font-weight: 600;
+}
+
+.section.home .btn {
+   margin-top:1rem;
+}
+
+/* ============  MEDIA QUERIES (Tablet&PC DEVICES)  ============== */
+@media screen and (min-width: 768px){
+   .section.home {
+      display:flex;
+      align-items: center;
+   }
+
+   .section.home .page-tit {
+      top:0;
+      left:50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: auto;
+      overflow:  visible;
+   }
+
+   .section.home .intro{
+     flex-direction: row; 
+     align-items: center; 
+     gap:3rem;
+   }
+
+   .section.home .intro>div{
+      flex:1;
+   }
+
+   .section.home .intro .intro-img{
+      flex:.8;
+   }
+
+   .section.home .intro-typing {
+      /* position: absolute;
+      top:-110px;
+      left:0;
+      font-size:3.5rem; */
+   }
+
+   .section.home .intro .intro-info {
+      padding-right: 2rem;
+   }
+
+   
+ }
