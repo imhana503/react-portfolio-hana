@@ -12,6 +12,7 @@ const sortDevice = [
    {value:'pc', name:'PC'},
    {value:'mobile', name:'MOBILE'},
    {value:'respons', name:'ResponsiveWeb'},
+   // {value:'wai', name:'웹접근성'},
 ];
 
 const SelectOption = ({ onChange, option }) =>{
@@ -63,7 +64,7 @@ const Project = () => {
             return new Date(b.date).getTime() - new Date(a.date).getTime();    
          } else {
            return new Date(a.date).getTime() - new Date(b.date).getTime();         
-         }  
+         }    
       }
   
       const copyData = JSON.parse(JSON.stringify(data));
