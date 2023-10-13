@@ -33,6 +33,7 @@ const Project = () => {
 
    const [data, setData] = useState([]);
 
+   //HEAD TITLE
    useEffect(()=>{
       setData( pojects );  
       
@@ -40,26 +41,24 @@ const Project = () => {
       title.textContent = 'PROJECT | 임하나의 포트폴리오';
    },[data]);
 
- 
-
+   //필터링
    const getData = () =>{
       const deviceCheck = (it) => {
-   
-         if( it.device === 'PC' ){
-            return it;
-         } 
-
-         if( it.device === 'MOBILE' ){
-            return it;
+         if( sortDevices === 'pc' ){
+           return it.device === 'PC';
          }
 
-         if( it.device === 'ResponsiveWeb' ){
-            return it;
+         if( sortDevices === 'mobile' ){
+            return it.device === 'Mobile';
          }
+
+         if( sortDevices === 'respons' ){
+            return it.device === 'ResponsiveWeb';
+         }
+        
       }
 
       const compare = (a, b) => {
-         console.log('srot')
          if( sortDates === 'latest' ){
             return new Date(b.date).getTime() - new Date(a.date).getTime();    
          } else {
@@ -69,12 +68,14 @@ const Project = () => {
   
       const copyData = JSON.parse(JSON.stringify(data));
       const dataDevicec =  sortDevices === 'all' ? copyData : copyData.filter((it)=> deviceCheck(it))
-      const dataSort = copyData.sort(compare);
+      const dataSort = dataDevicec.sort(compare);
 
-      return copyData;
+      return dataSort;
    }
 
-   getData();
+   useEffect(()=>{
+      getData();
+   },[])
 
 
    return(
@@ -94,16 +95,15 @@ const Project = () => {
          </div>
          <div className="card-wrap">
             {
-               getData().map((it)=>{
+               getData().map((it, idx)=>{
                   return( 
-                     <div className="card">
-                        <div className="img"><img src={it.thumb} alt='이미지'/></div>
-                        <div>
-                           <p>{it.title}</p>
-                           <p>{it.device}</p>
-                           <p>{it.date}</p>
-                           <a href="#" titlt="새창 열림" target='_blank' className="btn" rel="noopener noreferrer">사이트 바로가기</a>
+                     <div className="card" key={idx}>
+                        <div className="img"><img src={it.thumb} alt={`${it.title} 이미지`}/></div>
+                        <div className="card-list">
+                           <p className="tit">{it.title}</p>
+                           <p className="txt">device: {it.device} date: {it.date}</p>
                         </div>
+                        <a href={it.link} titlt="새창 열림" target='_blank' className="btn" rel="noopener noreferrer">사이트 바로가기</a>
                      </div>
                   )
                })

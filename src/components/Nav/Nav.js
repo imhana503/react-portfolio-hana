@@ -7,11 +7,11 @@ const Nav = () => {
    return(
       <nav className="nav">
          {
-            navs.map((it)=>{
+            navs.map((it, idx)=>{
                if( it.name === 'Git' ){
-                  return <a href="https://github.com/imhana503" target="_blank" title="새창 열림" rel="noopener noreferrer">{it.icon}<i class="blind">{it.name}</i></a>
+                  return <a href="https://github.com/imhana503" key={idx} target="_blank" title="새창 열림" rel="noopener noreferrer">{it.icon}<i class="blind">{it.name}</i></a>
                } else {
-                  return <NavLink to={it.path}>{it.icon}<i class="blind">{it.name}</i></NavLink>
+                  return <NavLink  key={idx} to={it.path}>{it.icon}<i class="blind">{it.name}</i></NavLink>
                }                
             })
          }
