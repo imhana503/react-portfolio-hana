@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/imhana503.github.io/react-portfolio/static/css/main.761c2cce.css",
+    "main.js": "/imhana503.github.io/react-portfolio/static/js/main.b1023100.js",
+    "index.html": "/imhana503.github.io/react-portfolio/index.html",
+    "main.761c2cce.css.map": "/imhana503.github.io/react-portfolio/static/css/main.761c2cce.css.map",
+    "main.b1023100.js.map": "/imhana503.github.io/react-portfolio/static/js/main.b1023100.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761c2cce.css",
+    "static/js/main.b1023100.js"
+  ]
+}
